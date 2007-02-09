@@ -232,6 +232,24 @@
     }
   
     /**
+     * Set Charset
+     *
+     * @param   string charset
+     */
+    function setCharset($charset) {
+      $this->charset= $charset;
+    }
+
+    /**
+     * Get Charset
+     *
+     * @return  string
+     */
+    function getCharset() {
+      return $this->charset;
+    }
+
+    /**
      * Get part body.
      *
      * @access  public
