@@ -70,7 +70,7 @@
      * line was read.
      *
      * @access  public
-     * @param   string delimiter delimiter to set
+     * @param   char delimiter delimiter to set
      */
     function setColDelimiter($delim) {
       $this->colDelim= $delim{0};
@@ -82,7 +82,7 @@
      * It only makes sense to call this before any line was read. 
      *
      * @access  public
-     * @param   string escape-delimiter escape-delimiter to set
+     * @param   char escape-delimiter escape-delimiter to set
      */
     function setEscapeDelimiter($escape) {
       $this->escape= $escape{0};
