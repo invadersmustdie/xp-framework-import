@@ -322,7 +322,7 @@
         }
         
         // Send it
-        if ($db->insert(substr($sql, 0, -2).')')) {
+        if ($db->insert('%c', substr($sql, 0, -2).')')) {
 
           // Fetch identity value if applicable.
           $this->identity && $id= $db->identity($this->sequence);
