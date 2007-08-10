@@ -408,10 +408,11 @@
      * @model   static
      * @access  public
      * @param   string string
+     * @param   string encoding default NULL
      * @return  &xml.Tree
      */
-    function &fromString($string) {
-      return parent::fromString($string, 'SOAPMessage');
+    function &fromString($string, $encoding= NULL) {
+      return parent::fromString($string, 'SOAPMessage', $encoding);
     }
 
     /**

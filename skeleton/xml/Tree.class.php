@@ -70,11 +70,14 @@
      * @access  public
      * @param   string string
      * @param   string c default __CLASS__ class name
+     * @param   string encoding default NULL
      * @return  &xml.Tree
      * @throws  xml.XMLFormatException in case of a parser error
      */
-    function &fromString($string, $c= __CLASS__) {
+    function &fromString($string, $c= __CLASS__, $encoding= NULL) {
       $parser= &new XMLParser();
+      if ($encoding) $parser->setEncoding($encoding);
+      
       $tree= &new $c();
       try(); {
         $parser->setCallback($tree);

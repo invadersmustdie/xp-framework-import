@@ -194,16 +194,17 @@
             $xml= '';
             while ($buf= $response->readData()) $xml.= $buf;
 
+            $encoding= 'iso-8859-1';
+            // Check encoding
+            if (NULL !== ($content_type= $response->getHeader('Content-Type'))) {
+              preg_match('/^([^;]+)(; ?charset=([^;]+))?/i', $content_type, $matches);
+              $type= $matches[1];
+              if (!empty($matches[3])) $encoding= $matches[3];
+            }
+
             $this->cat && $this->cat->debug('<<<', $xml);
-            if ($answer= &SOAPMessage::fromString($xml)) {
-
-              // Check encoding
-              if (NULL !== ($content_type= $response->getHeader('Content-Type'))) {
-                preg_match('/^([^;]+)(; ?charset=([^;]+))?/i', $content_type, $matches);
-                $type= $matches[1];
-                if (!empty($matches[3])) $answer->setEncoding($matches[3]);
-              }
-
+            if ($answer= &SOAPMessage::fromString($xml, $encoding)) {
+              $answer->setEncoding($encoding);
               $answer->action= $this->action;
             }
           } if (catch('Exception', $e)) {
