@@ -1,7 +1,7 @@
 <?php
 /* This class is part of the XP framework
  *
- * $Id: FormatBool.class.php 11504 2009-09-15 13:36:13Z friebe $
+ * $Id$
  */
 
   uses('text.csv.CellProcessor');

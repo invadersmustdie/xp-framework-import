@@ -1,7 +1,7 @@
 <?php
 /* This class is part of the XP framework
  *
- * $Id: GetDataSet.class.php 11512 2009-09-15 18:13:54Z friebe $
+ * $Id$
  */
 
   uses('text.csv.CellProcessor', 'rdbms.finder.FinderMethod');

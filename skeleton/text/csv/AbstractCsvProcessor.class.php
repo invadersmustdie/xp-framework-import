@@ -1,7 +1,7 @@
 <?php
 /* This class is part of the XP framework
  *
- * $Id: AbstractCsvProcessor.class.php 11505 2009-09-15 14:01:01Z friebe $ 
+ * $Id$ 
  */
 
   uses('text.csv.CellProcessor');

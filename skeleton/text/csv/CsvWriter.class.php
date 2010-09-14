@@ -1,7 +1,7 @@
 <?php
 /* This class is part of the XP framework
  *
- * $Id: CsvWriter.class.php 11510 2009-09-15 15:55:41Z friebe $
+ * $Id$
  */
 
   uses('io.streams.TextWriter', 'text.csv.AbstractCsvProcessor', 'text.csv.CsvFormat');

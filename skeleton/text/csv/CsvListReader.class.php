@@ -1,7 +1,7 @@
 <?php
 /* This class is part of the XP framework
  *
- * $Id: CsvListReader.class.php 11419 2009-09-13 11:49:30Z friebe $ 
+ * $Id$ 
  */
 
   uses('text.csv.CsvReader');
