@@ -6,15 +6,21 @@ Version ?.?.?, released ????-??-??
 ----------------------------------
 SVN version: ?????
 
-Features
-~~~~~~~~
-- Implemented equals() method in xml.Node
-  (friebe)
-
 Heads up!
 ~~~~~~~~~
 - Set client charset in rdbms.sybase.SybaseConnection to iso_1
   (friebe, kiesel)
+
+Bugfixes
+~~~~~~~~
+- Fixed possible fatal error in lang.ChainedException common stack trace
+  elements' calculation
+  (friebe)
+
+Features
+~~~~~~~~
+- Implemented equals() method in xml.Node
+  (friebe)
 
 
 Version 5.7.11, released 2010-09-14 
