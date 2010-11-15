@@ -6,6 +6,11 @@ Version ?.?.?, released ????-??-??
 ----------------------------------
 SVN version: ?????
 
+Features
+~~~~~~~~
+- Implemented equals() method in xml.Node
+  (friebe)
+
 Heads up!
 ~~~~~~~~~
 - Set client charset in rdbms.sybase.SybaseConnection to iso_1
