@@ -27,6 +27,8 @@ Bugfixes
 
 Features
 ~~~~~~~~
+- Added text.regex.Pattern::replaceWith() method
+  (friebe)
 - Added values() method to util.collections.HashTable
   (friebe)
 - Implemented equals() method in xml.Node
