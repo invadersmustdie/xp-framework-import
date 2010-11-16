@@ -24,6 +24,8 @@ Bugfixes
 - Changed img.fonts.TrueTypeFont's constructor to throw an exception if
   the font cannot be found
   (friebe)
+- Fixed Runtime::memoryUsage() and Runtime::peakMemoryUsage()
+  (friebe)
 
 Features
 ~~~~~~~~
