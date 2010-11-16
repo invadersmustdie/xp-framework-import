@@ -16,6 +16,8 @@ Bugfixes
 - Fixed lang.types.String::getBytes() to throw an exception instead of
   cutting off the returned bytes at the position of an encoding error
   (friebe)
+- Fixed absolute path calculation in io.Folder
+  (friebe)
 - Fixed possible fatal error in lang.ChainedException common stack trace
   elements' calculation
   (friebe)
