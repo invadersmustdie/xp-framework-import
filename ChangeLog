@@ -42,6 +42,8 @@ Features
   (friebe)
 - Implemented equals() method in xml.Node
   (friebe)
+- Added support for multiple cookies in unittest.web.WebTestCase
+  (kiesel, Felix Stahlberg)
 
 
 Version 5.7.11, released 2010-09-14 
