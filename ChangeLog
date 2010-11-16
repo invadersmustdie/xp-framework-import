@@ -21,6 +21,9 @@ Bugfixes
 - Fixed possible fatal error in lang.ChainedException common stack trace
   elements' calculation
   (friebe)
+- Changed img.fonts.TrueTypeFont's constructor to throw an exception if
+  the font cannot be found
+  (friebe)
 
 Features
 ~~~~~~~~
