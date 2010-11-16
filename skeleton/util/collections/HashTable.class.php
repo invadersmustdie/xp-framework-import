@@ -242,6 +242,19 @@
       }
       return $keys;
     }
+
+    /**
+     * Returns an array of values
+     *
+     * @return  lang.Generic[]
+     */
+    public function values() {
+      $values= array();
+      foreach (array_keys($this->_buckets) as $key) {
+        $values[]= $this->_buckets[$key][1];
+      }
+      return $values;
+    }
     
     /**
      * Returns a string representation of this map
