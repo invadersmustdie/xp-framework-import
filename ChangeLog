@@ -6,6 +6,11 @@ Version ?.?.?, released ????-??-??
 ----------------------------------
 SVN version: ?????
 
+
+Version 5.7.12, released 2010-11-17
+-----------------------------------
+SVN version: 14984
+
 Heads up!
 ~~~~~~~~~
 - Set client charset in rdbms.sybase.SybaseConnection to iso_1
