@@ -6,6 +6,11 @@ Version ?.?.?, released ????-??-??
 ----------------------------------
 SVN version: ?????
 
+Bugfixes
+~~~~~~~~
+- Fixed webservices.json.JsonDecoder when decoding overly long strings
+  (friebe, Mihai Ghigea)
+
 
 Version 5.7.12, released 2010-11-17
 -----------------------------------
