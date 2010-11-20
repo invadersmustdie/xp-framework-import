@@ -6,6 +6,12 @@ Version ?.?.?, released ????-??-??
 ----------------------------------
 SVN version: ?????
 
+Heads up!
+~~~~~~~~~
+- Changed util.log.ConsoleAppender to use util.cmd.Console class instead
+  of directly writing to STDERR
+  (friebe)
+
 Bugfixes
 ~~~~~~~~
 - Fixed webservices.json.JsonDecoder when decoding overly long strings
