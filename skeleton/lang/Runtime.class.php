@@ -16,6 +16,7 @@
    * Represents the runtime - that is, the PHP binary executing the
    * current process.
    *
+   * @test     xp://net.xp_framework.unittest.core.SystemExitTest
    * @test     xp://net.xp_framework.unittest.core.RuntimeTest
    * @purpose  Access to PHP runtime
    */
@@ -151,7 +152,7 @@
      * or at "--" (php [options] -- [args...])
      *
      * @param   string[] arguments
-     * @return  array<string, var>
+     * @return  [:var]
      * @throws  lang.FormatException in case an unrecognized argument is encountered
      */
     public static function parseArguments($arguments) {
@@ -266,7 +267,7 @@
      * @param   string class default NULL entry point class
      * @param   string[] arguments default []
      * @param   string cwd default NULL the working directory
-     * @param   array<string, string> default NULL the environment
+     * @param   [:string] default NULL the environment
      * @return  lang.Process
      */
     public function newInstance(
@@ -287,8 +288,9 @@
       // by the XP runners to transport scan_path, but since we're invoking
       // PHP directly here, expand it), and, if present, the bootstrap 
       // script and entry point class.
+      $include= '.'.PATH_SEPARATOR.PATH_SEPARATOR.get_include_path().PATH_SEPARATOR.implode(PATH_SEPARATOR, $options->getClassPath());
       $cmdline= array_merge(
-        $options->withSetting('include_path', '.'.PATH_SEPARATOR.get_include_path())->asArguments(),
+        $options->withSetting('include_path', $include)->asArguments(),
         $bootstrap ? array($this->bootstrapScript($bootstrap)) : array(),
         $class ? array($class) : array()
       );
@@ -298,7 +300,7 @@
       if ($this->startup('env')) {
         putenv('XP_CMDLINE='.implode('|', $cmdline));
       }
-      
+
       // Finally, fork executable
       return $this->getExecutable()->newInstance(array_merge($cmdline, $arguments), $cwd, $env);
     }
