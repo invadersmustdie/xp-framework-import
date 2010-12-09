@@ -17,6 +17,16 @@ Bugfixes
 - Fixed webservices.json.JsonDecoder when decoding overly long strings
   (friebe, Mihai Ghigea)
 
+Features
+~~~~~~~~
+- Ports: Added support to Google custom search for Spelling suggestions 
+  ("Did you mean"), Synonyms ("You could also try") and Key matches 
+  (~ Adwords)
+  (friebe)
+- Ports: Allowed passing arbitrary parameters in Google custom search
+  implementatiom, com.google.search.custom.GoogleSearchClient::searchFor()
+  (friebe)
+
 
 Version 5.7.12, released 2010-11-17
 -----------------------------------
