@@ -14,6 +14,8 @@ Heads up!
 
 Bugfixes
 ~~~~~~~~
+- Fixed bug #45 - Setting Properties on a LogAppender fails
+  (friebe)
 - Fixed webservices.json.JsonDecoder when decoding overly long strings
   (friebe, Mihai Ghigea)
 
