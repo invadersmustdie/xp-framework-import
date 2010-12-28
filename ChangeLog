@@ -28,6 +28,8 @@ Bugfixes
 
 Features
 ~~~~~~~~
+- Added fluent interface peer.http.FormRequestData::withPart() 
+  (friebe)
 - Added lang.RuntimeOptions::withClassPath() method
   (friebe)
 - Ports: Added support to Google custom search for Spelling suggestions 
