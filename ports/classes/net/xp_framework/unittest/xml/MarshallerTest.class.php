@@ -7,6 +7,9 @@
   uses(
     'unittest.TestCase',
     'net.xp_framework.unittest.xml.DialogType',
+    'net.xp_framework.unittest.xml.WindowType',
+    'net.xp_framework.unittest.xml.ApplicationType',
+    'net.xp_framework.unittest.xml.TextInputType',
     'xml.meta.Marshaller'
   );
 
@@ -186,6 +189,42 @@
     public function injectionFails() {
       $window= create(new WindowType())->withOwnerWindow(1);
       $this->fixture->marshalTo(new Node('window'), $window);
+    }
+
+    /**
+     * Test namespaces
+     *
+     * <code>
+     *   #[@xmlns(app = 'http://projects.xp-framework.net/xmlns/app')]
+     * </code>
+     *
+     * @see   xp://net.xp_framework.unittest.xml.ApplicationType
+     */
+    #[@test]
+    public function namespaces() {
+      $this->assertMarshalled(
+        '<app:application xmlns:app="http://projects.xp-framework.net/xmlns/app"/>',
+        $this->fixture->marshalTo(new Node('application'), new ApplicationType())
+      );
+    }
+
+    /**
+     * Tests casting
+     *
+     * <code>
+     *   #[@xmlfactory(element = '@disabled', cast = 'toBool')]
+     * </code>
+     */
+    #[@test]
+    public function casting() {
+      $t= new TextInputType();
+      $t->setId('name');
+      $t->setDisabled(TRUE);
+
+      $this->assertMarshalled(
+        '<input id="name" disabled="true"/>',
+        $this->fixture->marshalTo(new Node('input'), $t)
+      );
     }
   }
 ?>
