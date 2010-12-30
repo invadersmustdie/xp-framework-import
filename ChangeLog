@@ -31,6 +31,8 @@ Bugfixes
 
 Features
 ~~~~~~~~
+- Added xml.parser.TreeInputSource class
+  (friebe)
 - Added casting support to xml.meta.Marshaller and xml.meta.Unmarshaller
   (friebe)
 - Added injection support to xml.meta.Marshaller and xml.meta.Unmarshaller
