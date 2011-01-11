@@ -6,6 +6,11 @@ Version ?.?.?, released ????-??-??
 ----------------------------------
 SVN version: ?????
 
+
+Version 5.7.13, released 2011-01-11
+-----------------------------------
+SVN version: 15181
+
 Heads up!
 ~~~~~~~~~
 - Changed util.log.ConsoleAppender to use util.cmd.Console class instead
